@@ -1,14 +1,13 @@
 <div *ngIf="dato != undefined">
-<p>Detalle usuario</p>
-<ul>
-    <li>ID: {{dato.id}}</li>
-    <li>Nombre: {{dato.Nombre}}</li>
-    <li>Apellido: {{dato.Apellido}}</li>    
-    <li>Sexo: {{dato.Sexo}}</li>
-    <li>Fecha nacimiento: {{dato.FechaNac}}</li> 
-    <li>Email: {{dato.email}}</li>
-    <li>Foto: <img src="{{dato.FotoPerfil}}"> </li> 
-    <li><app-boton-entidad [objEntidad]="dato" (deleteItemEvent)="deleteDato($event)"></app-boton-entidad></li>
+<ul class="list-group">
+    <li class="list-group-item">ID: {{dato.id}}</li>
+    <li class="list-group-item">Nombre: {{dato.Nombre}}</li>
+    <li class="list-group-item">Apellido: {{dato.Apellido}}</li>    
+    <li class="list-group-item">Sexo: {{dato.Sexo}}</li>
+    <li class="list-group-item">Fecha nacimiento: {{dato.FechaNac}}</li> 
+    <li class="list-group-item">Email: {{dato.email}}</li>
+    <li class="list-group-item">Foto: <img src="{{dato.FotoPerfil}}"> </li> 
+    <li class="list-group-item"><app-boton-entidad [objEntidad]="dato" (deleteItemEvent)="deleteDato($event)"></app-boton-entidad></li>
 
 </ul>    
 </div>

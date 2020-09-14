@@ -11,9 +11,9 @@
 </tr>
 </table> -->
 
-<ul>
-    <li *ngFor = "let item of listado">
+<ul class="list-group">
+    <li class="list-group-item" *ngFor = "let item of listado">
+        <button (click)="verItem(item)"><mat-icon aria-hidden="false" aria-label="view">visibility</mat-icon></button>        
         {{item.Nombre}} {{item.Apellido}} 
-        <button (click)="verItem(item)"><mat-icon aria-hidden="false" aria-label="view">visibility</mat-icon></button>
     </li>
 </ul>

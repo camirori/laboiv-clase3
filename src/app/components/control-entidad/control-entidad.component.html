@@ -1,14 +1,21 @@
-<h2>Listado de usuarios:</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-lg">
+      <h2>Listado de usuarios:</h2>
+      <app-listado-entidad [listado]="usuarios" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
+    </div>
 
-<div>
-    <app-listado-entidad [listado]="usuarios" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
-</div>
 
-<h2>Usuarios borrados:</h2>
-<div>
-  <app-listado-entidad [listado]="usuariosBorrados" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
-</div>
+    <div class="col-lg">
+      <h2>Usuarios borrados:</h2>
+      <app-listado-entidad [listado]="usuariosBorrados" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
+    </div>
 
-<div *ngIf="usuarioSeleccionado != undefined">
-  <app-detalle-entidad [dato]="usuarioSeleccionado" (deleteItemEvent)="borrar($event)"></app-detalle-entidad>  
+    <div class="col-lg">
+      <h2>Detalle Usuario:</h2>
+      <app-detalle-entidad [dato]="usuarioSeleccionado" (deleteItemEvent)="borrar($event)"></app-detalle-entidad>  
+    </div>
+
+  </div>
 </div>
