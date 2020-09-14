@@ -1,0 +1,13 @@
+
+<p>Detalle usuario</p>
+<ul>
+    <li>ID: {{dato.id}}</li>
+    <li>Nombre: {{dato.Nombre}}</li>
+    <li>Apellido: {{dato.Apellido}}</li>    
+    <li>Sexo: {{dato.Sexo}}</li>
+    <li>Fecha nacimiento: {{dato.FechaNac}}</li> 
+    <li>Email: {{dato.email}}</li>
+    <li>Foto: <img src="{{dato.FotoPerfil}}"> </li> 
+    <li><app-boton-entidad [objEntidad]="dato" (deleteItemEvent)="deleteDato($event)"></app-boton-entidad></li>
+
+</ul>

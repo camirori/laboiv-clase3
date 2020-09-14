@@ -1,0 +1,14 @@
+<h2>Listado de usuarios:</h2>
+
+<div>
+    <app-listado-entidad [listado]="usuarios" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
+</div>
+
+<h2>Usuarios borrados:</h2>
+<div>
+  <app-listado-entidad [listado]="usuariosBorrados" (itemSelectedEvent)="verDetalle($event)"></app-listado-entidad>
+</div>
+
+<div *ngIf="usuarioSeleccionado != undefined">
+  <app-detalle-entidad [dato]="usuarioSeleccionado" (deleteItemEvent)="borrar($event)"></app-detalle-entidad>  
+</div>

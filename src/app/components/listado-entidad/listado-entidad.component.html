@@ -1,0 +1,19 @@
+<!-- <table>
+<tr>
+    <th *ngFor = "let column of headers">
+        {{column}}
+    </th>
+</tr>
+<tr *ngFor = "let row of listado">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+</tr>
+</table> -->
+
+<ul>
+    <li *ngFor = "let item of listado">
+        {{item.Nombre}} {{item.Apellido}} 
+        <button (click)="verItem(item)"><mat-icon aria-hidden="false" aria-label="view">visibility</mat-icon></button>
+    </li>
+</ul>
