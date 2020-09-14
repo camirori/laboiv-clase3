@@ -1,4 +1,4 @@
-
+<div *ngIf="dato != undefined">
 <p>Detalle usuario</p>
 <ul>
     <li>ID: {{dato.id}}</li>
@@ -10,4 +10,6 @@
     <li>Foto: <img src="{{dato.FotoPerfil}}"> </li> 
     <li><app-boton-entidad [objEntidad]="dato" (deleteItemEvent)="deleteDato($event)"></app-boton-entidad></li>
 
-</ul>
+</ul>    
+</div>
+

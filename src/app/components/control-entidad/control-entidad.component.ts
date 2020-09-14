@@ -19,6 +19,7 @@ export class ControlEntidadComponent implements OnInit {
       this.usuarios=users;
       console.log(this.usuarios);
     }); 
+    //this.usuarioSeleccionado= new Usuario 
     this.usuariosBorrados=[];
   }
 
