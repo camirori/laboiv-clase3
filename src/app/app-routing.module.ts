@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:'bienvenido', component: BienvenidoComponent},
   {path:'entidad/listado', component: ControlEntidadComponent},
   {path: '', redirectTo: 'bienvenido', pathMatch: 'full'},
+  {path: '**', redirectTo: 'bienvenido', pathMatch: 'full'},
 ];
 
 @NgModule({
